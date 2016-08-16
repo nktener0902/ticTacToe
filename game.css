@@ -1,0 +1,14 @@
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: solid #5555ff 1px;
+    padding: 0em;
+}
