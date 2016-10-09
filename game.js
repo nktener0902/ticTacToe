@@ -51,6 +51,19 @@ var clickMe = function(e) {
     win = true;
   }
 
+  // 斜めがそろっているかを調べる
+  if (
+    (parent_table.children.item(0).children.item(0).textContent == e.textContent &&
+    parent_table.children.item(1).children.item(1).textContent == e.textContent &&
+    parent_table.children.item(2).children.item(2).textContent == e.textContent )
+    ||
+    (parent_table.children.item(0).children.item(2).textContent == e.textContent &&
+    parent_table.children.item(1).children.item(1).textContent == e.textContent &&
+    parent_table.children.item(2).children.item(0).textContent == e.textContent )
+  ){
+    win = true;
+  }
+
   // 縦/横がそろっていた場合の処理（試合終了時の処理）
   if (win) {
     document.getElementById("message").textContent = player + " の勝ち";
