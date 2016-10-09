@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title tic tac toe
+    link(rel='stylesheet', href='/stylesheets/game.css')
+  body
+    p#console 先攻の番です
+    table
+      - for (i = 0; i < 3; i++)
+        tr
+          - for (j = 0; j < 3; j++)
+            td.cell
+    p#message
+    p#alert
+  script(type='text/javascript', src='/javascripts/game.js')
