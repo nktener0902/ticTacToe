@@ -15,6 +15,10 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # Release note
 
+## version 2.4
+
+Add a logout function.
+
 ## version 2.3
 
 Add a login page. Session is managed by MongoDB and express-session.
