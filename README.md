@@ -6,8 +6,9 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # How to play
 
-* Install npm, nodejs.
-* Move to this direcotry with a shell/command prompt.
+* Install npm, nodejs and MongoDB.
+* `git clone https://github.com/nktener0902/ticTacToe.git`
+* Move to this direcotry in your terminal.
 * `set DEBUG=app:* & npm start`  
 (windows)
 * Open browser, and http://localhost:3000/

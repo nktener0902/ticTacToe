@@ -46,3 +46,10 @@ module.exports.login = function(req, res){
         }
     });
 };
+
+/*ログアウト*/
+module.exports.logout = function(req, res){
+  req.session.destroy();
+  console.log('deleted sesstion');
+  res.redirect('/login');
+};

@@ -121,3 +121,9 @@ function addButton(parent_table){
   }, false);
   document.getElementById("message").parentNode.appendChild(button_element);
 }
+
+var logout_button = document.getElementById('logout_button');
+logout_button.addEventListener('click',
+  function(){
+    location.href = '/logout';
+  }, false);
