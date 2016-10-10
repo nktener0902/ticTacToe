@@ -6,7 +6,8 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 ## version 2.0
 Add web server on nodejs (express). Starting web server by a following command.
 
-`set DEBUG=app:* & npm start` (windows)
+`set DEBUG=app:* & npm start`  
+(windows)
 
 ## version 1.1
 Modified index.html and game.js. Functions of this app is not changed.
