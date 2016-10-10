@@ -1,4 +1,7 @@
+![Tic Tac Toe](./capture1.png)
+
 # ticTacToe
+
 Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # How to play
