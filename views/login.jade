@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title Login
+  body
+    h2 ログイン
+    form(action="/login", method="GET")
+      input(type="text", name="email", placeholder="Email")
+      input(type="password", name="password", placeholder="Password")
+      button(type="submit") ログイン
+
+    h2 新規登録
+    form(action="/add", method="POST")
+      input(type="text", name="email", placeholder="Email")
+      input(type="password", name="password", placeholder="Password")
+      button(type="submit") 新規登録

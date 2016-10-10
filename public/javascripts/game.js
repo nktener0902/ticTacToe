@@ -115,7 +115,7 @@ function addButton(parent_table){
     removeButton.parentNode.removeChild(removeButton);
     for (var i = 0; i < 3; i++){
       for (var j = 0; j < 3; j++){
-        parent_table.children.item(i).children.item(j).textContent = "　";
+        parent_table.children.item(i).children.item(j).textContent = "";
       }
     }
   }, false);

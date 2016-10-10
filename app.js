@@ -4,8 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const mongoose = require('mongoose');
 
-var routes = require('./routes/index');
+var routes = require('./routes');
 
 var app = express();
 
@@ -20,8 +23,39 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: 'secret',
+    store: new MongoStore({
+        db: 'session',
+        host: 'localhost',
+        url: 'mongodb://localhost:27017/session',
+        clear_interval: 60 * 60
+    }),
+    cookie: {
+        httpOnly: false,
+        maxAge: new Date(Date.now() + 60 * 60 * 1000)
+    }
+}));
 
-app.use('/', routes);
+// login check
+var loginCheck = function(req, res, next) {
+    if(req.session.user){
+      next();
+    }else{
+      res.redirect('/login');
+    }
+};
+
+app.get('/', loginCheck, routes.index);
+app.get('/login', routes.login);
+app.post('/add', routes.add);
+app.get('/logout', function(req, res){
+  req.session.destroy();
+  console.log('deleted sesstion');
+  res.redirect('/login');
+});
+
+//app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
