@@ -3,6 +3,10 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # Release note
 
+## version 2.1
+
+Add draw case where there is no blank cell.
+
 ## version 2.0
 Add web server on nodejs (express). Starting web server by a following command.
 
