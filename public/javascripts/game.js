@@ -67,28 +67,21 @@ var clickMe = function(e) {
   // 縦/横がそろっていた場合の処理（試合終了時の処理）
   if (win) {
     document.getElementById("message").textContent = player + " won!";
-    // TODO Button to go to next game.
-    // var button_element = document.createElement('button');
-    // button_element.type = "button";
-    // button_element.classList.add('btn');
-    // button_element.classList.add('btn-lg');
-    // button_element.classList.add('btn-primary');
-    // button_element.textContent = 'Next game';
-    // document.getElementById("message").parentNode.appendChild(button_element);
+    var button_element = document.createElement('button');
+    button_element.type = "button";
+    button_element.classList.add('btn');
+    button_element.classList.add('btn-lg');
+    button_element.classList.add('btn-primary');
+    button_element.textContent = 'Next game';
     playable = false;
     document.getElementById("console").textContent = "Game over";
+    addButton(parent_table);
     return 0;
   }
   if (count == 8){
     document.getElementById("message").textContent = "Draw!";
-    // TODO Button to go to next game.
-    // var button_element = document.createElement('button');
-    // button_element.type = "button";
-    // button_element.classList.add('btn');
-    // button_element.classList.add('btn-lg');
-    // button_element.classList.add('btn-primary');
-    // button_element.textContent = 'Next game';
-    // document.getElementById("message").parentNode.appendChild(button_element);
+    // Button to go to next game.
+    addButton(parent_table);
     playable = false;
     document.getElementById("console").textContent = "Game over";
     return 0;
@@ -101,4 +94,30 @@ var clickMe = function(e) {
 var clickElements = document.getElementsByClassName("cell");
 for (var i = 0; i < clickElements.length; i++) {
   clickElements[i].addEventListener('click', clickMe, false);
+}
+
+// Button to go to next game.
+function addButton(parent_table){
+  var button_element = document.createElement('button');
+  button_element.type = "button";
+  button_element.id = "nextButton";
+  button_element.classList.add('btn');
+  button_element.classList.add('btn-lg');
+  button_element.classList.add('btn-primary');
+  button_element.textContent = 'Next game';
+  button_element.addEventListener('click', function(){
+    count = 0;
+    playable = true;
+    document.getElementById("console").textContent = "Next is First player.";
+    document.getElementById("message").textContent = "";
+    document.getElementById("alert").textContent = "";
+    var removeButton = document.getElementById("nextButton");
+    removeButton.parentNode.removeChild(removeButton);
+    for (var i = 0; i < 3; i++){
+      for (var j = 0; j < 3; j++){
+        parent_table.children.item(i).children.item(j).textContent = "　";
+      }
+    }
+  }, false);
+  document.getElementById("message").parentNode.appendChild(button_element);
 }

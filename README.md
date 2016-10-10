@@ -4,12 +4,16 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 # How to play
 
 * Install npm, nodejs.
-* Move this direcotry in a shell or a command prompt.
+* Move to this direcotry with a shell/command prompt.
 * `set DEBUG=app:* & npm start`  
 (windows)
 * Open browser, and http://localhost:3000/
 
 # Release note
+
+## version 2.2
+
+Add a new function that enables players to go to a next game.
 
 ## version 2.1
 

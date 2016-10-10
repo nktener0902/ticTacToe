@@ -6,14 +6,15 @@ html
     link(rel='stylesheet', href='/css/bootstrap.css', media='screen', charset='utf-8')
     link(rel='stylesheet', href='/stylesheets/game.css')
   body
-    p#console Next is First player.
-    table
-      - for (i = 0; i < 3; i++)
-        tr
-          - for (j = 0; j < 3; j++)
-            td.cell
-    p#message
-    p#alert
+    div#bodycontent
+      p#console Next is First player.
+      table
+        - for (i = 0; i < 3; i++)
+          tr
+            - for (j = 0; j < 3; j++)
+              td.cell
+      p#message
+      p#alert
   script(type='text/javascript', src='/javascripts/game.js')
   script(type='text/javascript', src='/js/jquery.js')
   script(type='text/javascript', src='/js/bootstrap.js')
