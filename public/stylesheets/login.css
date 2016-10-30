@@ -1,4 +1,7 @@
-/* Style the list */
+div#bodycontent{
+    margin: 50px auto;
+}
+
 ul.tab {
     list-style-type: none;
     margin: 0;
@@ -53,4 +56,29 @@ input#loginform {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
 }
