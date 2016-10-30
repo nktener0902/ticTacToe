@@ -15,6 +15,10 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # Release note
 
+## version 2.5
+
+Modified the UI of a login page.
+
 ## version 2.4
 
 Add a logout function.

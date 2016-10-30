@@ -3,15 +3,33 @@ html
   head
     meta(charset="UTF-8")
     title Login
+    link(rel='stylesheet', href='/css/bootstrap.css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='/stylesheets/login.css', media='screen', charset='utf-8')
   body
-    h2 ログイン
-    form(action="/login", method="GET")
-      input(type="text", name="email", placeholder="Email")
-      input(type="password", name="password", placeholder="Password")
-      button(type="submit") ログイン
-
-    h2 新規登録
-    form(action="/add", method="POST")
-      input(type="text", name="email", placeholder="Email")
-      input(type="password", name="password", placeholder="Password")
-      button(type="submit") 新規登録
+    div.container
+      div.row
+        div.col-md-6.col-md-offset-3
+          ul.tab
+            li
+              a#defaultOpen(href="javascript:void(0)", class="tablinks", onclick="openTab(event, 'London')") Login
+            li
+              a(href="javascript:void(0)", class="tablinks", onclick="openTab(event, 'Paris')") Register
+          div#London.tabcontent
+            h2 Log in
+            form(action="/login", method="GET")
+              div.form-group
+                input(type="text", name="email", placeholder="Email")
+              div.form-group
+                input(type="password", name="password", placeholder="Password")
+              div.form-group
+                button.btn.btn-success(type="submit") Log in
+          div#Paris.tabcontent
+            h2 Register
+            form(action="/add", method="POST")
+              div.form-group
+                input(type="text", name="email", placeholder="Email")
+              div.form-group
+                input(type="password", name="password", placeholder="Password")
+              div.form-group
+                button.btn.btn-success(type="submit") Create Account
+    script(type="text/javascript", src="/javascripts/logintab.js")
