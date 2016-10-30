@@ -28,6 +28,10 @@ ul.tab li a:hover {background-color: #ddd;}
 /* Create an active/current tablink class */
 ul.tab li a:focus, .active {background-color: #ccc;}
 
+input#loginform {
+    width: 300px;
+}
+
 /* Style the tab content */
 .tabcontent {
     display: none;
