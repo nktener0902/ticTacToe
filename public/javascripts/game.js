@@ -1,5 +1,5 @@
 /**
-* 三目並べ
+* Tic Tac Toe game.
 */
 var count = 0;
 var playable = true;
@@ -24,14 +24,18 @@ var clickMe = function(e) {
     nextplayer = "First player";
     e.textContent = "×";
   }
-  e.target.textContent = e.textContent;
 
-  // 三つそろっているかを調べる
+  if (e.target.textContent == ""){
+    e.target.textContent = e.textContent;
+  }else {
+    return 0;
+  }
+
   var parent_tr = e.target.parentNode;
   var xindex = Array.prototype.indexOf.call(parent_tr.cells, e.target);
   var parent_table = parent_tr.parentNode;
 
-  // 縦の列がそろっているかを調べる
+  // Check vertical line.
   var matchX = true;
   for (var i = 0; i < parent_table.children.length; i++) {
     if (parent_table.children.item(i).children.item(xindex).textContent != e.textContent) {
@@ -43,7 +47,7 @@ var clickMe = function(e) {
     win = true;
   }
 
-  // 横の列がそろっているかを調べる
+  // Check horizontal line.
   if (parent_tr.cells[0].textContent == e.textContent &&
     parent_tr.cells[1].textContent == e.textContent &&
     parent_tr.cells[2].textContent == e.textContent
