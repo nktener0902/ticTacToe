@@ -15,6 +15,10 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 # Release note
 
+## version 2.7
+
+Bug fixed.
+
 ## version 2.6
 
 Add a login error page.
