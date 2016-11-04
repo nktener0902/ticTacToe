@@ -42,7 +42,7 @@ module.exports.login = function(req, res){
       if(email == "" && password == ""){
         res.render('login', {nomatch: "Please enter your e-mail address and password."});
       }else if(email === undefined && password === undefined){
-        res.render('login', {nomatch: ""});
+        res.render('login', {nomatch: "Please enter your e-mail address and password."});
       }else{
         res.render('login', {nomatch: "The e-mail address or password do not match."});
       }
