@@ -10,6 +10,8 @@ Tic Tac Toe app. This program is created for my Javascript skill up.
 
 ```
 git clone https://github.com/nktener0902/ticTacToe.git
+cd ticTacToe
+npm install
 ```
 
 * Move to this direcotry in your terminal
