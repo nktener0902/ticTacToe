@@ -16,3 +16,4 @@ npm install
 ```
 
 * ```npm start```
+* View `http://localhost:3000`
