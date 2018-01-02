@@ -32,7 +32,7 @@ app.use(session({
         clear_interval: 60 * 60
     }),
     cookie: {
-        httpOnly: false,
+        httpOnly: true,
         maxAge: new Date(Date.now() + 60 * 60 * 1000)
     }
 }));
